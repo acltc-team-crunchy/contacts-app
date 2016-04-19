@@ -1,0 +1,15 @@
+<h1>Your Contacts</h1>
+<table>
+  <tr>
+    <th>Full Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+<% @contacts.each do |contact| %>
+  <tr>
+    <td><%= link_to "#{contact.first_name} #{contact.last_name}", "/contacts/#{contact.id}" %></td>
+    <td>Email: <%= contact.email %></td>
+    <td>Phone: <%= contact.phone_number %></td>
+  </tr>
+<% end %>
+</table>

@@ -5,7 +5,7 @@ class Contact < ActiveRecord::Base
   end
 
   def full_name
-    return "#{first_name} #{last_name}"
+    return "#{first_name} #{middle_name} #{last_name}"
   end
 
   def phone_number_plus_jp_ext
